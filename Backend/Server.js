@@ -12,11 +12,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT
 
-app.get("/", (req, res) => {
-});
-
 app.use(express.json()); // Middleware. Allows us to accept JSON data in the req.body
 
+app.use("/")
 app.use("/api/products", productRoutes)
 
 app.listen(PORT, () => {
